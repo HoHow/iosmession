@@ -3,7 +3,9 @@ var router          = express.Router();
 
 
 router.get('/',function(req, res, next){
-
+  var headers = request.headers;
+  var xxx     = headers['xxx'];
+  
 });
 
 
