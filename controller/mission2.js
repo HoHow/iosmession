@@ -1,8 +1,8 @@
 exports.searchPokemon = function(req,res){
   var headers = req.headers;
-  var name     = headers['name'];
+  var id     = headers['id'];
 
-  switch(name){
+  switch(id){
     case 'Bulbasaur':
       var url = 'https://'+req.hostname+'/001.jpg';
       return res.json({StatusCode:200,id:001,chinese:'妙蛙種子',english:'Bulbasaur',weight:6.9,url:url});
