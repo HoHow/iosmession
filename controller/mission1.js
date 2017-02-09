@@ -1,7 +1,7 @@
 exports.kindofPokemon = function (req,res){
   var id = req.query.id;
 
-    if(id !== null && id !== String){
+    
     switch(id){
       case '001':
         return res.json({StatusCode:200,id:1,chinese:'妙蛙種子',english:'Bulbasaur',weight:6.9});
@@ -24,8 +24,8 @@ exports.kindofPokemon = function (req,res){
         break;
 
       default:
-        return res.json({StatusCode:400,error:'找不到ID'});
+        return res.json({StatusCode:400,error:'找不到該神奇寶貝'});
 
     }
-  }
+  
 }
