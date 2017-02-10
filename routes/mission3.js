@@ -10,8 +10,9 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.post('/',function(req, res, next){
   
   controller.searchPokemon(req, res);
-  res.end();
+  
 });
 
 
 module.exports      = router; 
+

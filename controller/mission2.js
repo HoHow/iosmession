@@ -1,7 +1,7 @@
 exports.searchPokemon = function(req,res){
   var headers = req.headers;
   var id     = headers['id'];
-
+  console.log(typeof id);
   switch(id){
     case '001':
       var url = 'https://'+req.hostname+'/001.jpg';
