@@ -1,5 +1,5 @@
 var express = require('express');
-var controller = require('../controller/mission4');
+var controller = require('../controller/pokemon');
 var multiparty = require('multiparty');
 var http = require('http');
 var util = require('util');

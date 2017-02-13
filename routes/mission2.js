@@ -1,5 +1,7 @@
 var express         = require('express');
-var controller      = require('../controller/mission2');
+var url = require("url");
+var controller      = require('../controller/pokemon');
+
 var router          = express.Router();
 
 
