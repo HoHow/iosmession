@@ -26,7 +26,7 @@ exports.kindofPokemon = function (req,res){
 
       case "5":
         
-        return getdata(res,"1",5,"火恐龍","Charmeleon",19.0);
+        return getdata(res,"1",5,"火恐龍","Charmeleon",19.1);
         break;
 
       default:
@@ -46,7 +46,7 @@ exports.searchPokemon = function(req,res){
     switch(id){
       case '1':
         var url = 'https://'+req.hostname+'/001.jpg';
-        return getdata(res,"1",5,"火恐龍","Charmeleon",19.1,url);
+        return getdata(res,"1",5,"妙蛙種子","Charmeleon",6.9,url);
         break;
       case '2':
         var url = 'https://'+req.hostname+'/002.jpg';
@@ -85,19 +85,19 @@ exports.transform = function(req,res){
   if(id !== ''){  
     switch(id){
       case '1':
-        return getformdata(res,"1",1,"妙蛙種子","Bulbasaur","草","毒",19.1);
+        return getformdata(res,"1",1,"妙蛙種子","Bulbasaur","草","毒",6.9);
         break;
       case '2':       
         return getformdata(res,"1",2,"妙蛙草","Ivysaur","草","毒",13.1);
         break;
       case '3':   
-        return getformdata(res,"1",3,"妙蛙花","Venusaur","草","毒",19.0);
+        return getformdata(res,"1",3,"妙蛙花","Venusaur","草","毒",100.1);
         break;
       case '4':
         return getformdata(res,"1",4,"小火龍","Charmander","火","無",8.5);
         break;
       case '5':
-        return getformdata(res,"1",5,"小火龍","Charmander","火","無",19.2);
+        return getformdata(res,"1",5,"小火龍","Charmander","火","無",19.1);
         break;
       default:
         return geterror(res,"-1","找不到該神奇寶貝");
