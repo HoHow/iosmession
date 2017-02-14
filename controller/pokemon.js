@@ -1,4 +1,5 @@
 var multiparty = require('multiparty');
+
 //mission1,mission3
 exports.kindofPokemon = function (req,res){
   var id = '';
@@ -8,7 +9,7 @@ exports.kindofPokemon = function (req,res){
      id = req.body.id;
   }
   
-  if(id !== ""){
+  if(id !== "" || id !== undefined){
     switch(id){
       case "1":
         return getdata(res,"1",1,"妙蛙種子","Bulbasaur",6.9)
@@ -35,6 +36,8 @@ exports.kindofPokemon = function (req,res){
   }else{
     return geterror(res,"-2","請輸入ID");
   }
+
+  console.log(req.url);
   
 }
 //mission2
