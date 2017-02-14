@@ -9,8 +9,8 @@ exports.kindofPokemon = function (req,res){
   }else{
      id = req.body.id;
   }
-  
-    if(id !== ""){
+  console.log(id);
+    if(id !== "" && id !==undefined){
       switch(id){
         case "1":
           return getdata(res,"1",1,"妙蛙種子","Bulbasaur",6.9)
@@ -32,11 +32,11 @@ exports.kindofPokemon = function (req,res){
           break;
 
         default:
-          return geterror(res,"-2","請輸入ID");
+          return geterror(res,"-1","找不到該神奇寶貝");
       }
     }else{
+      return geterror(res,"-2","請輸入ID");
       
-      return geterror(res,"-1","找不到該神奇寶貝");
     }
   
 
