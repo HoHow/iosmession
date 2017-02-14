@@ -5,8 +5,11 @@ var controller    = require('../controller/pokemon');
 
 router.get('/',function(req, res, next){
   
-  controller.kindofPokemon(req,res);
   
+    controller.kindofPokemon(req,res);
+
+    
+
   res.end();
 });
 
