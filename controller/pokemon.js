@@ -35,13 +35,8 @@ exports.kindofPokemon = function (req,res){
           return geterror(res,"-1","找不到該神奇寶貝");
       }
     }else{
-      return geterror(res,"-2","請輸入ID");
-      
+      return geterror(res,"-2","請輸入ID"); 
     }
-  
-
-  
-  
 }
 //mission2
 exports.searchPokemon = function(req,res){
