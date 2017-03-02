@@ -13,13 +13,13 @@ exports.getPhoto = function(req,res) {
     var form = new multiparty.Form({uploadDir:'./uploads'});
     form.parse(req, function(err,files) {      
       if(!files){
-          res.status(400).json({message:'請確認上傳圖片'});
+          res.status(400).json({status:"-2",message:'請確認上傳圖片'});
           return;
       }else{
         if(files === undefined || Object.keys(files).length === 0){
-          res.json({message:'圖片上傳失敗'});  
+          res.json({status:"-1",message:'圖片上傳失敗'});  
         }else{
-          res.json({message:'圖片上傳成功'});  
+          res.json({status:"1",message:'圖片上傳成功'});  
         }
       }
       
