@@ -6,7 +6,7 @@ router.get('/',function(req,res){
   
   
   
-    res.json({message:"下載成功",url:'https://'+req.hostname+'/mg3008.JPG'})
+    res.json({status:"1",url:'https://'+req.hostname+'/mg.jpg'})
   
   
   res.end(); 
